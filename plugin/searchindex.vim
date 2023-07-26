@@ -207,10 +207,10 @@ function! s:PrintMatches()
   " Shorten the message string, to make it one screen wide. Do it only if the
   " T flag is inside the shortmess variable.
   " It seems that the press enter message won't be printed only if the length
-  " of the message is shorter by at least 11 chars than the real length of the
+  " of the message is shorter by at least 12 chars than the real length of the
   " screen.
   if &shortmess =~# "T"
-    let l:msg = s:ShortString(l:msg, &columns - 11)
+    let l:msg = s:ShortString(l:msg, &columns - 12)
   endif
 
   " Flush any delayed screen updates before printing "l:msg".
